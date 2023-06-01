@@ -8,6 +8,7 @@ import "./App.css";
 // then capitalize it
 
 const App = () => {
+  const [inputText, setInputText] = useState("");
   const [output, setOutput] = useState<string>("");
 
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <input
             className='input-text'
             type='text'
+            onChange={(e) => setInputText(e.target.value)}
             placeholder='Enter a text here...'
           />
         </div>
