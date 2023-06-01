@@ -1,13 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 
+// get the input text
+// break the string to array
+// use for each method to get each word
+// then get the first letter by using [i] syntax
+// then capitalize it
+
 const App = () => {
   const [output, setOutput] = useState<string>("");
 
   return (
     <div className='container'>
       <div className='question-container'>
-        <h1 className='title'>Palindrome Checker</h1>
+        <h1 className='title'>The Capitalizer</h1>
         <div className='input-container'>
           <input
             className='input-text'
@@ -22,7 +28,7 @@ const App = () => {
       </div>
       <div className='btn-container'>
         <button className='btn' type='button'>
-          Check
+          Capitalize
         </button>
       </div>
     </div>
