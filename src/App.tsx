@@ -11,6 +11,30 @@ const App = () => {
   const [inputText, setInputText] = useState("");
   const [output, setOutput] = useState<string>("");
 
+  const capitalizeString = (text: string) => {
+    const str: string[] = text.trim().split(" ");
+    let capFirstLetters: string[] = [];
+    let wordArr: string[] = [];
+
+    str.forEach((word) => {
+      capFirstLetters.push(word[0].toUpperCase());
+
+      wordArr.push(word.slice(1));
+    });
+
+    const capedString = capFirstLetters
+      .map((value, index) => {
+        return value + wordArr[index];
+      })
+      .join(" ");
+
+    setOutput(capedString);
+  };
+
+  const handleBtnClick = (inputStr: string) => {
+    capitalizeString(inputStr);
+  };
+
   return (
     <div className='container'>
       <div className='question-container'>
@@ -29,7 +53,11 @@ const App = () => {
         <div className='output'>{output}</div>
       </div>
       <div className='btn-container'>
-        <button className='btn' type='button'>
+        <button
+          className='btn'
+          type='button'
+          onClick={() => handleBtnClick(inputText)}
+        >
           Capitalize
         </button>
       </div>
