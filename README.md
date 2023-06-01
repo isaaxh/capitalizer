@@ -11,6 +11,14 @@ To consider this project complete, I need to accomplish the following:
 - Basic CSS styling to make it presentable
 - Fully functional logic
 
+## Project Reflection
+
+I can improve this project by doing following: 
+
+- I can chain built-in js string functions to make the code concise and I can avoid using temporary variables. 
+- I can use .trim() on any string to trim out white spaces from the start and end of the string.
+- I can use substring(i) to get string excluding a char which can be specified by i in this example.
+
 ## ScreenShots
 
 ![AppScreenshot](./src/assets/capitalizeString-demonstration.png)
