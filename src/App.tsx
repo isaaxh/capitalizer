@@ -11,24 +11,35 @@ const App = () => {
   const [inputText, setInputText] = useState("");
   const [output, setOutput] = useState<string>("");
 
+  // const capitalizeString = (text: string) => {
+  //   const str: string[] = text.trim().split(" ");
+  //   let capFirstLetters: string[] = [];
+  //   let wordArr: string[] = [];
+
+  //   str.forEach((word) => {
+  //     capFirstLetters.push(word[0].toUpperCase());
+
+  //     wordArr.push(word.slice(1));
+  //   });
+
+  //   const capedString = capFirstLetters
+  //     .map((value, index) => {
+  //       return value + wordArr[index];
+  //     })
+  //     .join(" ");
+
+  //   setOutput(capedString);
+  // };
+
+  // other's code
   const capitalizeString = (text: string) => {
-    const str: string[] = text.trim().split(" ");
-    let capFirstLetters: string[] = [];
-    let wordArr: string[] = [];
+    const splitText = text.trim().toLowerCase().split(" ");
+    for (let i = 0; i < splitText.length; i++) {
+      splitText[i] =
+        splitText[i].charAt(0).toUpperCase() + splitText[i].substring(1);
+    }
 
-    str.forEach((word) => {
-      capFirstLetters.push(word[0].toUpperCase());
-
-      wordArr.push(word.slice(1));
-    });
-
-    const capedString = capFirstLetters
-      .map((value, index) => {
-        return value + wordArr[index];
-      })
-      .join(" ");
-
-    setOutput(capedString);
+    setOutput(splitText.join(" "));
   };
 
   const handleBtnClick = (inputStr: string) => {
