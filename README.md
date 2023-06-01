@@ -12,3 +12,5 @@ To consider this project complete, I need to accomplish the following:
 - Fully functional logic
 
 ## ScreenShots
+
+![capitalizerScreenshot]('./src/assets/capitalizeString-demonstration.png)
