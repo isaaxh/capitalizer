@@ -13,4 +13,4 @@ To consider this project complete, I need to accomplish the following:
 
 ## ScreenShots
 
-![AppScreenshot]('./src/assets/capitalizeString-demonstration.png')
+![AppScreenshot](./src/assets/capitalizeString-demonstration.png)
